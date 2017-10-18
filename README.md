@@ -8,4 +8,4 @@ Besides, it not only focussed on copy/pasting templates but should also be a kno
 
 Here is an example for the language R:
 
-* [R](R/README.md)
+* [R](R/)
