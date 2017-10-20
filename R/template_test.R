@@ -4,9 +4,9 @@ library("testthat")
 #For using it in a package, use devtools::use_testthat()
 #That will initialize the tests/testhat dir and create
 #a testthat.R file in tests that executes all the tests
-#on R CMD Check
+#on R CMD check
 
-#Message when executing R CMD Check or devtools::test()
+#Message when executing R CMD check or devtools::test()
 context("Very importatnt test")
 
 #First Test-Case
