@@ -69,12 +69,12 @@ More information can be found here:
 #### Java
 For Java integration, `rJava` can be used to execute Java code given a .jar file.
 
-~~~
+~~~R
 install.packages("rJava")
 library("rJava")
 ~~~
 To use a .jar file inside an R package, you can just put it into `/inst/java`. With the onLoad method in the R directory which loads the Java libraries when `library(rJava)`` is called, the classes can be accessed in an easy way.
-~~~
+~~~R
 J("com.example.Class1")$exampleFunction(args)
 ~~~
 The above commands executes the 'exampleFunction' from Class1 in the "com.example" package inside a jar file in root/inst/java.
@@ -86,7 +86,7 @@ args = .jarray(args)
 J("com.example.Class1")$exampleFunction(args)
 ~~~
 In these or more complicated packages, it might be recommendable to write a simple wrapper function in R, that handles input in the usual way and care for the Java part only on the inside:
-~~~
+~~~R
 exampleFunction = function(args){
 	args = .jarray(args)
 	J("com.example.Class1")$exampleFunction(args)
@@ -95,7 +95,7 @@ exampleFunction = function(args){
 
 So, in the application code, it can be called like this:
 
-~~~
+~~~R
 exampleFunction(c("a","b","c"))
 ~~~
 
